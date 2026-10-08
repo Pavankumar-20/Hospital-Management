@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | MediCare Plus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-bg-shapes">
+      <div class="auth-shape auth-shape-1"></div>
+      <div class="auth-shape auth-shape-2"></div>
+    </div>
+
+    <a href="index.html" class="auth-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+    <div class="auth-container">
+      <div class="auth-brand">
+        <div class="auth-brand-logo"><i class="fas fa-heart-pulse"></i> MediCare+</div>
+        <h2>Welcome Back to Your Health Portal</h2>
+        <p>Access your medical records, book appointments, and manage your healthcare journey with ease.</p>
+        <div class="auth-features">
+          <div class="auth-feature"><i class="fas fa-check"></i> Secure & Encrypted Access</div>
+          <div class="auth-feature"><i class="fas fa-check"></i> 24/7 Portal Availability</div>
+          <div class="auth-feature"><i class="fas fa-check"></i> Instant Appointment Booking</div>
+        </div>
+      </div>
+
+      <div class="auth-form-wrapper">
+        <div class="auth-form-header">
+          <h2>Sign In</h2>
+          <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+
+        <div class="auth-role-tabs">
+          <button type="button" class="auth-role-tab active" data-role="patient"><i class="fas fa-user"></i> Patient</button>
+          <button type="button" class="auth-role-tab" data-role="doctor"><i class="fas fa-user-md"></i> Doctor</button>
+          <button type="button" class="auth-role-tab" data-role="admin"><i class="fas fa-shield-alt"></i> Admin</button>
+        </div>
+
+        <form class="auth-form" id="loginForm">
+          <input type="hidden" name="role" value="patient">
+
+          <div class="form-group">
+            <label class="form-label required">Email Address</label>
+            <div class="input-group">
+              <i class="fas fa-envelope input-group-icon"></i>
+              <input type="email" class="form-control has-icon" name="email" placeholder="Enter your email">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label required">Password</label>
+            <div class="input-group">
+              <i class="fas fa-lock input-group-icon"></i>
+              <input type="password" class="form-control has-icon has-action" name="password" placeholder="Enter your password">
+              <button type="button" class="input-group-action password-toggle"><i class="fas fa-eye"></i></button>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="rememberMe">
+              <span class="checkmark"><i class="fas fa-check"></i></span>
+              <span class="form-check-label">Remember me</span>
+            </label>
+            <a href="#" class="forgot-password-link">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+        </form>
+
+        <div class="demo-credentials">
+          <h5><i class="fas fa-info-circle"></i> Demo Credentials</h5>
+          <p>Email: <code>patient@hms.com</code></p>
+          <p>Password: <code>Patient@123</code></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="theme-toggle" style="position:fixed;top:2rem;right:2rem;z-index:100;"><i class="fas fa-moon"></i></button>
+
+  <script src="js/theme.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

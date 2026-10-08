@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Appointments | MediCare Plus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/tables.css">
+  <link rel="stylesheet" href="../css/forms.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header"><a href="../index.html" class="sidebar-logo"><i class="fas fa-heart-pulse"></i><span>MediCare+</span></a><button class="sidebar-close"><i class="fas fa-times"></i></button></div>
+      <div class="sidebar-user"><div class="sidebar-user-avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Admin"></div><div class="sidebar-user-info"><h5>Admin User</h5><span>Administrator</span></div></div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-section"><p class="sidebar-nav-title">Main Menu</p>
+          <a href="dashboard.html" class="sidebar-link"><i class="fas fa-th-large"></i> Dashboard</a>
+          <a href="doctors.html" class="sidebar-link"><i class="fas fa-user-md"></i> Manage Doctors</a>
+          <a href="patients.html" class="sidebar-link"><i class="fas fa-users"></i> Manage Patients</a>
+          <a href="appointments.html" class="sidebar-link active"><i class="fas fa-calendar-check"></i> Appointments</a>
+          <a href="departments.html" class="sidebar-link"><i class="fas fa-building"></i> Departments</a>
+        </div>
+        <div class="sidebar-nav-section"><p class="sidebar-nav-title">Reports</p>
+          <a href="reports.html" class="sidebar-link"><i class="fas fa-chart-bar"></i> Reports</a>
+          <a href="settings.html" class="sidebar-link"><i class="fas fa-cog"></i> Settings</a>
+        </div>
+      </nav>
+      <div class="sidebar-footer"><a href="#" class="sidebar-link logout logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></div>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div class="dashboard-header-left"><button class="sidebar-toggle"><i class="fas fa-bars"></i></button><div class="dashboard-search"><i class="fas fa-search"></i><input type="text" placeholder="Search appointments..."></div></div>
+        <div class="dashboard-header-right"><button class="theme-toggle header-action"><i class="fas fa-moon"></i></button><button class="header-action"><i class="fas fa-bell"></i></button></div>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="page-title-bar"><h1>Manage Appointments</h1><p>Schedule, track, and manage all patient appointments</p></div>
+
+        <div class="stats-cards" style="margin-bottom:1.5rem;">
+          <div class="stat-card glass-card"><div class="stat-card-icon blue"><i class="fas fa-calendar-day"></i></div><div class="stat-card-content"><h3>342</h3><p>Today's Appointments</p><div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 28 remaining</div></div></div>
+          <div class="stat-card glass-card"><div class="stat-card-icon green"><i class="fas fa-check-circle"></i></div><div class="stat-card-content"><h3>218</h3><p>Completed Today</p><div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 64% completion</div></div></div>
+          <div class="stat-card glass-card"><div class="stat-card-icon orange"><i class="fas fa-clock"></i></div><div class="stat-card-content"><h3>86</h3><p>Scheduled</p><div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> Next 7 days</div></div></div>
+          <div class="stat-card glass-card"><div class="stat-card-icon red"><i class="fas fa-times-circle"></i></div><div class="stat-card-content"><h3>14</h3><p>Cancelled Today</p><div class="stat-card-trend down"><i class="fas fa-arrow-down"></i> 3 fewer than yesterday</div></div></div>
+        </div>
+
+        <div class="table-container">
+          <div class="table-header">
+            <h3>All Appointments (2,847)</h3>
+            <div class="table-actions">
+              <div class="search-input"><i class="fas fa-search"></i><input type="text" class="form-control table-search" placeholder="Search..."></div>
+              <select class="form-control table-filter"><option value="all">All Status</option><option value="scheduled">Scheduled</option><option value="completed">Completed</option><option value="cancelled">Cancelled</option><option value="pending">Pending</option></select>
+              <button class="btn btn-primary btn-sm" data-modal="addAppointmentModal"><i class="fas fa-plus"></i> New Appointment</button>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead><tr><th>Appointment ID</th><th>Patient</th><th>Doctor</th><th>Department</th><th>Date</th><th>Time</th><th>Type</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td>APT-7821</td><td><div class="table-user"><div class="table-user-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt=""></div><div class="table-user-info"><h5>John Smith</h5><span>PAT-10452</span></div></div></td><td>Dr. Sarah Wilson</td><td>Cardiology</td><td>Jul 29, 2026</td><td>09:00 AM</td><td>Follow-up</td><td><span class="status-badge active">Scheduled</span></td><td><div class="table-action-btns"><button class="table-action-btn view"><i class="fas fa-eye"></i></button><button class="table-action-btn edit"><i class="fas fa-edit"></i></button><button class="table-action-btn delete"><i class="fas fa-trash"></i></button></div></td></tr>
+                <tr><td>APT-7822</td><td><div class="table-user"><div class="table-user-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop" alt=""></div><div class="table-user-info"><h5>Emily Johnson</h5><span>PAT-10453</span></div></div></td><td>Dr. Michael Chen</td><td>Neurology</td><td>Jul 29, 2026</td><td>09:30 AM</td><td>Consultation</td><td><span class="status-badge pending">Completed</span></td><td><div class="table-action-btns"><button class="table-action-btn view"><i class="fas fa-eye"></i></button><button class="table-action-btn edit"><i class="fas fa-edit"></i></button><button class="table-action-btn delete"><i class="fas fa-trash"></i></button></div></td></tr>
+                <tr><td>APT-7823</td><td><div class="table-user"><div class="table-user-avatar"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop" alt=""></div><div class="table-user-info"><h5>Robert Williams</h5><span>PAT-10454</span></div></div></td><td>Dr. David Kumar</td><td>Orthopedics</td><td>Jul 29, 2026</td><td>10:00 AM</td><td>Emergency</td><td><span class="status-badge active">Scheduled</span></td><td><div class="table-action-btns"><button class="table-action-btn view"><i class="fas fa-eye"></i></button><button class="table-action-btn edit"><i class="fas fa-edit"></i></button><button class="table-action-btn delete"><i class="fas fa-trash"></i></button></div></td></tr>
+                <tr><td>APT-7824</td><td><div class="table-user"><div class="table-user-avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop" alt=""></div><div class="table-user-info"><h5>Sarah Davis</h5><span>PAT-10455</span></div></div></td><td>Dr. Emily Parker</td><td>Pediatrics</td><td>Jul 29, 2026</td><td>10:30 AM</td><td>Check-up</td><td><span class="status-badge inactive">Cancelled</span></td><td><div class="table-action-btns"><button class="table-action-btn view"><i class="fas fa-eye"></i></button><button class="table-action-btn edit"><i class="fas fa-edit"></i></button><button class="table-action-btn delete"><i class="fas fa-trash"></i></button></div></td></tr>
+                <tr><td>APT-7825</td><td><div class="table-user"><div class="table-user-avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop" alt=""></div><div class="table-user-info"><h5>Michael Brown</h5><span>PAT-10456</span></div></div></td><td>Dr. Jennifer White</td><td>Dermatology</td><td>Jul 29, 2026</td><td>11:00 AM</td><td>Consultation</td><td><span class="status-badge pending">Completed</span></td><td><div class="table-action-btns"><button class="table-action-btn view"><i class="fas fa-eye"></i></button><button class="table-action-btn edit"><i class="fas fa-edit"></i></button><button class="table-action-btn delete"><i class="fas fa-trash"></i></button></div></td></tr>
+                <tr><td>APT-7826</td><td><div class="table-user"><div class="table-user-avatar"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop" alt=""></div><div class="table-user-info"><h5>Lisa Anderson</h5><span>PAT-10457</span></div></div></td><td>Dr. Sarah Wilson</td><td>Cardiology</td><td>Jul 29, 2026</td><td>11:30 AM</td><td>Follow-up</td><td><span class="status-badge active">Scheduled</span></td><td><div class="table-action-btns"><button class="table-action-btn view"><i class="fas fa-eye"></i></button><button class="table-action-btn edit"><i class="fas fa-edit"></i></button><button class="table-action-btn delete"><i class="fas fa-trash"></i></button></div></td></tr>
+                <tr><td>APT-7827</td><td><div class="table-user"><div class="table-user-avatar"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop" alt=""></div><div class="table-user-info"><h5>James Taylor</h5><span>PAT-10458</span></div></div></td><td>Dr. Michael Chen</td><td>Neurology</td><td>Jul 29, 2026</td><td>02:00 PM</td><td>Consultation</td><td><span class="status-badge pending">Pending</span></td><td><div class="table-action-btns"><button class="table-action-btn view"><i class="fas fa-eye"></i></button><button class="table-action-btn edit"><i class="fas fa-edit"></i></button><button class="table-action-btn delete"><i class="fas fa-trash"></i></button></div></td></tr>
+                <tr><td>APT-7828</td><td><div class="table-user"><div class="table-user-avatar"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop" alt=""></div><div class="table-user-info"><h5>Maria Garcia</h5><span>PAT-10459</span></div></div></td><td>Dr. Emily Parker</td><td>Pediatrics</td><td>Jul 29, 2026</td><td>02:30 PM</td><td>Check-up</td><td><span class="status-badge active">Scheduled</span></td><td><div class="table-action-btns"><button class="table-action-btn view"><i class="fas fa-eye"></i></button><button class="table-action-btn edit"><i class="fas fa-edit"></i></button><button class="table-action-btn delete"><i class="fas fa-trash"></i></button></div></td></tr>
+                <tr><td>APT-7829</td><td><div class="table-user"><div class="table-user-avatar"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=80&h=80&fit=crop" alt=""></div><div class="table-user-info"><h5>David Martinez</h5><span>PAT-10460</span></div></div></td><td>Dr. David Kumar</td><td>Orthopedics</td><td>Jul 29, 2026</td><td>03:00 PM</td><td>Surgery Prep</td><td><span class="status-badge pending">Completed</span></td><td><div class="table-action-btns"><button class="table-action-btn view"><i class="fas fa-eye"></i></button><button class="table-action-btn edit"><i class="fas fa-edit"></i></button><button class="table-action-btn delete"><i class="fas fa-trash"></i></button></div></td></tr>
+                <tr><td>APT-7830</td><td><div class="table-user"><div class="table-user-avatar"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop" alt=""></div><div class="table-user-info"><h5>Jennifer Lee</h5><span>PAT-10461</span></div></div></td><td>Dr. Jennifer White</td><td>Dermatology</td><td>Jul 29, 2026</td><td>03:30 PM</td><td>Consultation</td><td><span class="status-badge active">Scheduled</span></td><td><div class="table-action-btns"><button class="table-action-btn view"><i class="fas fa-eye"></i></button><button class="table-action-btn edit"><i class="fas fa-edit"></i></button><button class="table-action-btn delete"><i class="fas fa-trash"></i></button></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-footer"><span class="table-info">Showing 1-5 of 10 entries</span><div class="pagination" data-rows="5"><button class="pagination-btn" data-page="prev"><i class="fas fa-chevron-left"></i></button><button class="pagination-btn active" data-page="1">1</button><button class="pagination-btn" data-page="2">2</button><button class="pagination-btn" data-page="next"><i class="fas fa-chevron-right"></i></button></div></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="addAppointmentModal">
+    <div class="modal">
+      <div class="modal-header"><h3>Schedule New Appointment</h3><button class="modal-close"><i class="fas fa-times"></i></button></div>
+      <form id="addAppointmentForm">
+        <div class="modal-body">
+          <div class="form-row">
+            <div class="form-group"><label class="form-label required">Patient</label><select class="form-control" name="patient"><option value="">Select Patient</option><option value="10452">John Smith (PAT-10452)</option><option value="10453">Emily Johnson (PAT-10453)</option><option value="10454">Robert Williams (PAT-10454)</option><option value="10455">Sarah Davis (PAT-10455)</option></select></div>
+            <div class="form-group"><label class="form-label required">Doctor</label><select class="form-control" name="doctor"><option value="">Select Doctor</option><option value="wilson">Dr. Sarah Wilson</option><option value="chen">Dr. Michael Chen</option><option value="parker">Dr. Emily Parker</option><option value="kumar">Dr. David Kumar</option></select></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label required">Department</label><select class="form-control" name="department"><option value="">Select</option><option value="cardiology">Cardiology</option><option value="neurology">Neurology</option><option value="orthopedics">Orthopedics</option><option value="pediatrics">Pediatrics</option><option value="dermatology">Dermatology</option></select></div>
+            <div class="form-group"><label class="form-label required">Appointment Type</label><select class="form-control" name="type"><option value="">Select</option><option value="consultation">Consultation</option><option value="follow-up">Follow-up</option><option value="check-up">Check-up</option><option value="emergency">Emergency</option></select></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label required">Date</label><input type="date" class="form-control" name="date"></div>
+            <div class="form-group"><label class="form-label required">Time</label><input type="time" class="form-control" name="time"></div>
+          </div>
+          <div class="form-group"><label class="form-label">Notes</label><textarea class="form-control" name="notes" rows="2" placeholder="Additional notes for the appointment"></textarea></div>
+        </div>
+        <div class="modal-footer"><button type="button" class="btn btn-outline" data-close-modal>Cancel</button><button type="submit" class="btn btn-primary">Schedule Appointment</button></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/validation.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

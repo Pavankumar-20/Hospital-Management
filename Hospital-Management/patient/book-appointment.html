@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | MediCare Plus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/tables.css">
+  <link rel="stylesheet" href="../css/forms.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo"><i class="fas fa-heart-pulse"></i><span>MediCare+</span></a>
+        <button class="sidebar-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="sidebar-user">
+        <div class="sidebar-user-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="John Doe"></div>
+        <div class="sidebar-user-info"><h5>John Doe</h5><span>Patient</span></div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-section">
+          <p class="sidebar-nav-title">Main Menu</p>
+          <a href="dashboard.html" class="sidebar-link"><i class="fas fa-th-large"></i> Dashboard</a>
+          <a href="profile.html" class="sidebar-link"><i class="fas fa-user"></i> My Profile</a>
+          <a href="book-appointment.html" class="sidebar-link active"><i class="fas fa-calendar-plus"></i> Book Appointment</a>
+          <a href="appointments.html" class="sidebar-link"><i class="fas fa-calendar-check"></i> Appointment History</a>
+          <a href="prescriptions.html" class="sidebar-link"><i class="fas fa-file-prescription"></i> Prescriptions</a>
+        </div>
+        <div class="sidebar-nav-section">
+          <p class="sidebar-nav-title">Account</p>
+          <a href="settings.html" class="sidebar-link"><i class="fas fa-cog"></i> Settings</a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" class="sidebar-link logout logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div class="dashboard-header-left">
+          <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+          <div class="dashboard-search"><i class="fas fa-search"></i><input type="text" placeholder="Search doctors..."></div>
+        </div>
+        <div class="dashboard-header-right">
+          <button class="theme-toggle header-action"><i class="fas fa-moon"></i></button>
+          <button class="header-action notification-btn"><i class="fas fa-bell"></i><span class="notification-dot"></span></button>
+          <div class="header-user">
+            <div class="header-user-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="John Doe"></div>
+            <div class="header-user-info"><h5>John Doe</h5><span>Patient</span></div>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-content page-transition">
+        <div class="page-title-bar">
+          <h1>Book Appointment</h1>
+          <p>Schedule a visit with one of our specialist doctors at MediCare Plus.</p>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <div class="dashboard-card-header"><h3>Appointment Details</h3></div>
+            <div class="dashboard-card-body">
+              <form id="bookingForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label required" for="department">Department</label>
+                    <select class="form-control" id="department" name="department">
+                      <option value="">Loading departments...</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label required" for="doctor">Doctor</label>
+                    <select class="form-control" id="doctor" name="doctor" disabled>
+                      <option value="">Select Doctor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label required" for="appointmentDate">Preferred Date</label>
+                  <input type="date" class="form-control" id="appointmentDate" name="appointmentDate">
+                </div>
+                <div class="form-group">
+                  <label class="form-label required">Available Time Slots</label>
+                  <div class="time-slots" id="timeSlots">
+                    <p class="text-muted">Please select a date first</p>
+                  </div>
+                  <input type="hidden" id="selectedTime" name="selectedTime" value="">
+                </div>
+                <div class="form-group">
+                  <label class="form-label required" for="symptoms">Symptoms / Reason for Visit</label>
+                  <textarea class="form-control" id="symptoms" name="symptoms" rows="4" placeholder="Describe your symptoms or reason for the appointment (minimum 10 characters)..."></textarea>
+                </div>
+                <div class="form-actions">
+                  <button type="reset" class="btn btn-outline">Clear Form</button>
+                  <button type="submit" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Appointment</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-card-header"><h3>Booking Guidelines</h3></div>
+            <div class="dashboard-card-body">
+              <div class="health-tip">
+                <h4><i class="fas fa-info-circle"></i> Before You Book</h4>
+                <p>Select your department and preferred doctor. Appointments are available Monday through Saturday.</p>
+              </div>
+              <div class="health-tip" style="margin-top: 1rem;">
+                <h4><i class="fas fa-clock"></i> Cancellation Policy</h4>
+                <p>Please cancel at least 24 hours in advance if you cannot attend your scheduled appointment.</p>
+              </div>
+              <div class="health-tip" style="margin-top: 1rem;">
+                <h4><i class="fas fa-id-card"></i> What to Bring</h4>
+                <p>Bring a valid ID, insurance card, and any previous medical records or test results related to your visit.</p>
+              </div>
+              <div class="profile-details" style="margin-top: 1.5rem;">
+                <h4 style="margin-bottom: 1rem;">Popular Departments</h4>
+                <div class="profile-detail-item"><i class="fas fa-heart-pulse"></i><span>Cardiology — Heart &amp; vascular care</span></div>
+                <div class="profile-detail-item"><i class="fas fa-brain"></i><span>Neurology — Brain &amp; nervous system</span></div>
+                <div class="profile-detail-item"><i class="fas fa-bone"></i><span>Orthopedics — Bones &amp; joints</span></div>
+                <div class="profile-detail-item"><i class="fas fa-child"></i><span>Pediatrics — Child healthcare</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/validation.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/appointment.js"></script>
+  <script src="../js/patient.js"></script>
+</body>
+</html>

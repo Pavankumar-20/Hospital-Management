@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MediCare Plus - Premium Hospital Management System providing world-class healthcare services">
+  <title>MediCare Plus | Premium Healthcare Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="fas fa-heart-pulse"></i>
+        <span>MediCare<span class="text-emerald">+</span></span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="#departments" class="nav-link">Departments</a></li>
+        <li><a href="#doctors" class="nav-link">Doctors</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="nav-dropdown">
+          <a href="login.html" class="btn btn-primary btn-sm">Login <i class="fas fa-chevron-down"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="login.html" class="nav-dropdown-item"><i class="fas fa-user"></i> Patient Login</a>
+            <a href="login.html" class="nav-dropdown-item"><i class="fas fa-user-md"></i> Doctor Login</a>
+            <a href="login.html" class="nav-dropdown-item"><i class="fas fa-shield-alt"></i> Admin Login</a>
+          </div>
+        </div>
+        <div class="nav-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="hero-shape hero-shape-1"></div>
+      <div class="hero-shape hero-shape-2"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-text reveal">
+        <h1>Your Health Is Our <span>Top Priority</span></h1>
+        <p>Experience world-class healthcare with our team of expert doctors and state-of-the-art medical facilities. Book your appointment today.</p>
+        <div class="hero-buttons">
+          <a href="patient/book-appointment.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+          <a href="#departments" class="btn btn-outline btn-lg"><i class="fas fa-stethoscope"></i> Our Services</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><h3 class="counter" data-target="150">0</h3><p>Expert Doctors</p></div>
+          <div class="hero-stat"><h3 class="counter" data-target="50000">0</h3><p>Happy Patients</p></div>
+          <div class="hero-stat"><h3 class="counter" data-target="25">0</h3><p>Departments</p></div>
+        </div>
+      </div>
+      <div class="hero-image reveal-right">
+        <div class="hero-image-main">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=500&fit=crop" alt="Modern Hospital">
+        </div>
+        <div class="hero-float-card hero-float-card-1">
+          <i class="fas fa-user-md"></i>
+          <div><h5>150+ Doctors</h5><p>Expert Specialists</p></div>
+        </div>
+        <div class="hero-float-card hero-float-card-2">
+          <i class="fas fa-award"></i>
+          <div><h5>ISO Certified</h5><p>Quality Healthcare</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Doctor Section -->
+  <section class="search-section">
+    <div class="container">
+      <form class="search-card glass-card" id="doctorSearchForm">
+        <div class="search-group">
+          <label>Department</label>
+          <select name="department">
+            <option value="">All Departments</option>
+            <option value="cardiology">Cardiology</option>
+            <option value="neurology">Neurology</option>
+            <option value="orthopedics">Orthopedics</option>
+            <option value="pediatrics">Pediatrics</option>
+            <option value="dermatology">Dermatology</option>
+          </select>
+        </div>
+        <div class="search-group">
+          <label>Doctor Name</label>
+          <input type="text" name="doctor" placeholder="Search by name">
+        </div>
+        <div class="search-group">
+          <label>Date</label>
+          <input type="date" name="date">
+        </div>
+        <div class="search-group">
+          <label>Location</label>
+          <select name="location">
+            <option value="">All Locations</option>
+            <option value="main">Main Campus</option>
+            <option value="north">North Wing</option>
+            <option value="south">South Wing</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-emerald"><i class="fas fa-search"></i> Search</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Departments Section -->
+  <section id="departments">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge badge-primary">Our Departments</span>
+        <h2 class="section-title">Specialized Medical Care</h2>
+        <p class="section-subtitle">We offer comprehensive healthcare services across multiple specialized departments</p>
+      </div>
+      <div class="departments-grid" id="departmentsGrid">
+        <div class="dept-card glass-card reveal delay-1">
+          <div class="dept-icon"><i class="fas fa-heart-pulse"></i></div>
+          <h4>Cardiology</h4>
+          <p>Advanced heart care with cutting-edge diagnostic and treatment facilities</p>
+        </div>
+        <div class="dept-card glass-card reveal delay-2">
+          <div class="dept-icon"><i class="fas fa-brain"></i></div>
+          <h4>Neurology</h4>
+          <p>Expert neurological care for brain and nervous system disorders</p>
+        </div>
+        <div class="dept-card glass-card reveal delay-3">
+          <div class="dept-icon"><i class="fas fa-bone"></i></div>
+          <h4>Orthopedics</h4>
+          <p>Comprehensive bone, joint, and muscle treatment and rehabilitation</p>
+        </div>
+        <div class="dept-card glass-card reveal delay-4">
+          <div class="dept-icon"><i class="fas fa-baby"></i></div>
+          <h4>Pediatrics</h4>
+          <p>Specialized healthcare for infants, children, and adolescents</p>
+        </div>
+        <div class="dept-card glass-card reveal delay-5">
+          <div class="dept-icon"><i class="fas fa-hand-dots"></i></div>
+          <h4>Dermatology</h4>
+          <p>Complete skin care solutions from diagnosis to advanced treatments</p>
+        </div>
+        <div class="dept-card glass-card reveal">
+          <div class="dept-icon"><i class="fas fa-eye"></i></div>
+          <h4>Ophthalmology</h4>
+          <p>Expert eye care with modern surgical and laser treatment options</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Doctors Section -->
+  <section id="doctors" style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge badge-emerald">Our Team</span>
+        <h2 class="section-title">Meet Our Expert Doctors</h2>
+        <p class="section-subtitle">Highly qualified and experienced medical professionals dedicated to your health</p>
+      </div>
+      <div class="doctors-grid" id="doctorsGrid">
+        <div class="doctor-card glass-card reveal delay-1">
+          <div class="doctor-image">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop" alt="Dr. Sarah Wilson">
+            <div class="doctor-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="doctor-info">
+            <h4>Dr. Sarah Wilson</h4>
+            <p class="specialty">Cardiologist</p>
+            <div class="doctor-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.9</div>
+          </div>
+        </div>
+        <div class="doctor-card glass-card reveal delay-2">
+          <div class="doctor-image">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop" alt="Dr. Michael Chen">
+            <div class="doctor-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="doctor-info">
+            <h4>Dr. Michael Chen</h4>
+            <p class="specialty">Neurologist</p>
+            <div class="doctor-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.8</div>
+          </div>
+        </div>
+        <div class="doctor-card glass-card reveal delay-3">
+          <div class="doctor-image">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop" alt="Dr. Emily Parker">
+            <div class="doctor-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="doctor-info">
+            <h4>Dr. Emily Parker</h4>
+            <p class="specialty">Pediatrician</p>
+            <div class="doctor-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0</div>
+          </div>
+        </div>
+        <div class="doctor-card glass-card reveal delay-4">
+          <div class="doctor-image">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop" alt="Dr. David Kumar">
+            <div class="doctor-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="doctor-info">
+            <h4>Dr. David Kumar</h4>
+            <p class="specialty">Orthopedic Surgeon</p>
+            <div class="doctor-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.7</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge badge-primary">What We Offer</span>
+        <h2 class="section-title">Our Hospital Services</h2>
+        <p class="section-subtitle">Comprehensive healthcare services designed to meet all your medical needs</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card glass-card reveal delay-1">
+          <div class="service-icon"><i class="fas fa-ambulance"></i></div>
+          <div class="service-content"><h4>24/7 Emergency Care</h4><p>Round-the-clock emergency services with rapid response teams and advanced life support systems.</p></div>
+        </div>
+        <div class="service-card glass-card reveal delay-2">
+          <div class="service-icon"><i class="fas fa-microscope"></i></div>
+          <div class="service-content"><h4>Advanced Diagnostics</h4><p>State-of-the-art laboratory and imaging facilities for accurate and timely diagnosis.</p></div>
+        </div>
+        <div class="service-card glass-card reveal delay-3">
+          <div class="service-icon"><i class="fas fa-procedures"></i></div>
+          <div class="service-content"><h4>Surgical Excellence</h4><p>Modern operation theaters equipped with the latest surgical technology and expert surgeons.</p></div>
+        </div>
+        <div class="service-card glass-card reveal delay-4">
+          <div class="service-icon"><i class="fas fa-pills"></i></div>
+          <div class="service-content"><h4>Pharmacy Services</h4><p>Full-service pharmacy with genuine medicines and professional pharmaceutical guidance.</p></div>
+        </div>
+        <div class="service-card glass-card reveal delay-5">
+          <div class="service-icon"><i class="fas fa-heart"></i></div>
+          <div class="service-content"><h4>Intensive Care Unit</h4><p>Advanced ICU with continuous monitoring and specialized critical care nursing staff.</p></div>
+        </div>
+        <div class="service-card glass-card reveal">
+          <div class="service-icon"><i class="fas fa-wheelchair"></i></div>
+          <div class="service-content"><h4>Rehabilitation Center</h4><p>Comprehensive physical therapy and rehabilitation programs for complete recovery.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section style="background: var(--gray-100);">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-image reveal-left">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15a508118?w=600&h=450&fit=crop" alt="Healthcare Team">
+        </div>
+        <div class="reveal-right">
+          <span class="badge badge-emerald">Why Choose Us</span>
+          <h2 class="section-title" style="text-align:left;margin-bottom:1.5rem;">Excellence in Healthcare Since 1995</h2>
+          <div class="why-features">
+            <div class="why-feature glass-card">
+              <div class="why-feature-icon"><i class="fas fa-certificate"></i></div>
+              <div><h4>Accredited Excellence</h4><p>JCI accredited hospital meeting international healthcare standards</p></div>
+            </div>
+            <div class="why-feature glass-card">
+              <div class="why-feature-icon"><i class="fas fa-users"></i></div>
+              <div><h4>Expert Medical Team</h4><p>150+ board-certified doctors with decades of combined experience</p></div>
+            </div>
+            <div class="why-feature glass-card">
+              <div class="why-feature-icon"><i class="fas fa-laptop-medical"></i></div>
+              <div><h4>Advanced Technology</h4><p>Latest medical equipment and digital health records system</p></div>
+            </div>
+            <div class="why-feature glass-card">
+              <div class="why-feature-icon"><i class="fas fa-hand-holding-heart"></i></div>
+              <div><h4>Patient-Centered Care</h4><p>Personalized treatment plans focused on your comfort and recovery</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal"><h2 class="counter" data-target="50000">0</h2><p>Patients Treated</p></div>
+        <div class="stat-item reveal delay-1"><h2 class="counter" data-target="150">0</h2><p>Expert Doctors</p></div>
+        <div class="stat-item reveal delay-2"><h2 class="counter" data-target="25">0</h2><p>Departments</p></div>
+        <div class="stat-item reveal delay-3"><h2 class="counter" data-target="30">0</h2><p>Years of Service</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge badge-primary">Testimonials</span>
+        <h2 class="section-title">What Our Patients Say</h2>
+        <p class="section-subtitle">Real stories from patients who experienced our exceptional care</p>
+      </div>
+      <div class="testimonials-slider">
+        <div class="testimonials-track">
+          <div class="testimonial-card">
+            <div class="testimonial-content glass-card">
+              <i class="fas fa-quote-left quote-icon"></i>
+              <p>"The care I received at MediCare Plus was exceptional. Dr. Wilson and her team saved my life. The staff was compassionate and professional throughout my treatment."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Robert Johnson">
+                <div><h5>Robert Johnson</h5><span>Cardiac Patient</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content glass-card">
+              <i class="fas fa-quote-left quote-icon"></i>
+              <p>"As a mother, finding the right pediatrician was crucial. Dr. Parker has been wonderful with my children. The hospital facilities are modern and child-friendly."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Maria Garcia">
+                <div><h5>Maria Garcia</h5><span>Parent</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content glass-card">
+              <i class="fas fa-quote-left quote-icon"></i>
+              <p>"After my knee surgery, the rehabilitation team helped me recover faster than expected. The entire experience from admission to discharge was seamless."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="James Wilson">
+                <div><h5>James Wilson</h5><span>Orthopedic Patient</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-nav">
+          <span class="testimonial-dot active"></span>
+          <span class="testimonial-dot"></span>
+          <span class="testimonial-dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge badge-emerald">Gallery</span>
+        <h2 class="section-title">Our Hospital Facilities</h2>
+        <p class="section-subtitle">Take a virtual tour of our modern healthcare infrastructure</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=400&fit=crop" alt="Hospital Building"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516549655169-dff83e077f5a?w=400&h=400&fit=crop" alt="Operation Theater"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?w=400&h=400&fit=crop" alt="Patient Room"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1579684385127-1ef15a508118?w=400&h=400&fit=crop" alt="Medical Team"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1538108149393-fbbd81893307?w=400&h=400&fit=crop" alt="Laboratory"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge badge-primary">Contact Us</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Have questions? We're here to help. Reach out to us anytime.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-item glass-card">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><h5>Our Location</h5><p>123 Healthcare Avenue, Medical District, City 400001</p></div>
+          </div>
+          <div class="contact-item glass-card">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div><h5>Phone Number</h5><p>+1 (555) 123-4567<br>Emergency: +1 (555) 911-0000</p></div>
+          </div>
+          <div class="contact-item glass-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div><h5>Email Address</h5><p>info@medicareplus.com<br>appointments@medicareplus.com</p></div>
+          </div>
+          <div class="contact-item glass-card">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div><h5>Working Hours</h5><p>Mon - Sat: 8:00 AM - 8:00 PM<br>Emergency: 24/7</p></div>
+          </div>
+        </div>
+        <form class="contact-form glass-card reveal-right" id="contactForm">
+          <div class="form-row">
+            <div class="form-group"><label class="form-label required">Full Name</label><input type="text" class="form-control" name="name" placeholder="Your name"></div>
+            <div class="form-group"><label class="form-label required">Email</label><input type="email" class="form-control" name="email" placeholder="Your email"></div>
+          </div>
+          <div class="form-group"><label class="form-label required">Subject</label><input type="text" class="form-control" name="subject" placeholder="How can we help?"></div>
+          <div class="form-group"><label class="form-label required">Message</label><textarea class="form-control" name="message" placeholder="Your message"></textarea></div>
+          <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><i class="fas fa-heart-pulse"></i><span>MediCare<span class="text-emerald">+</span></span></a>
+          <p>Providing exceptional healthcare services with compassion and excellence since 1995. Your health is our mission.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h5>Quick Links</h5><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="#doctors">Our Doctors</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h5>Departments</h5><ul class="footer-links"><li><a href="#">Cardiology</a></li><li><a href="#">Neurology</a></li><li><a href="#">Orthopedics</a></li><li><a href="#">Pediatrics</a></li></ul></div>
+        <div class="footer-col"><h5>Patient Portal</h5><ul class="footer-links"><li><a href="login.html">Patient Login</a></li><li><a href="register.html">Register</a></li><li><a href="patient/book-appointment.html">Book Appointment</a></li><li><a href="#">Medical Records</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MediCare Plus Hospital. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart text-emerald"></i> for better healthcare</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/theme.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

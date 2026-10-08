@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Patients | Doctor Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/tables.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header"><a href="../index.html" class="sidebar-logo"><i class="fas fa-heart-pulse"></i><span>MediCare+</span></a><button class="sidebar-close"><i class="fas fa-times"></i></button></div>
+      <div class="sidebar-user"><div class="sidebar-user-avatar"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop" alt="Doctor"></div><div class="sidebar-user-info"><h5>Doctor</h5><span>Doctor</span></div></div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-section"><p class="sidebar-nav-title">Main Menu</p>
+          <a href="dashboard.html" class="sidebar-link"><i class="fas fa-th-large"></i> Dashboard</a>
+          <a href="appointments.html" class="sidebar-link"><i class="fas fa-calendar-check"></i> Appointments</a>
+          <a href="patients.html" class="sidebar-link active"><i class="fas fa-users"></i> Patients</a>
+          <a href="prescriptions.html" class="sidebar-link"><i class="fas fa-prescription-bottle-medical"></i> Prescriptions</a>
+        </div>
+        <div class="sidebar-nav-section"><p class="sidebar-nav-title">Account</p>
+          <a href="profile.html" class="sidebar-link"><i class="fas fa-user"></i> Profile</a>
+          <a href="settings.html" class="sidebar-link"><i class="fas fa-cog"></i> Settings</a>
+        </div>
+      </nav>
+      <div class="sidebar-footer"><a href="#" class="sidebar-link logout logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></div>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div class="dashboard-header-left"><button class="sidebar-toggle"><i class="fas fa-bars"></i></button></div>
+        <div class="dashboard-header-right"><button class="theme-toggle header-action"><i class="fas fa-moon"></i></button></div>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="page-title-bar"><h1>My Patients</h1><p>Patients you have consulted or are assigned to</p></div>
+
+        <div class="table-container">
+          <div class="table-header"><h3 id="doctorPatientsTitle">Patients</h3></div>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead><tr><th>Patient</th><th>Patient ID</th><th>Age / Gender</th><th>Blood Group</th><th>Last Visit</th><th>Status</th></tr></thead>
+              <tbody id="doctorPatients"><tr><td colspan="6" style="text-align:center;">Loading...</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/doctor.js"></script>
+</body>
+</html>

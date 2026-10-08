@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Dashboard | MediCare Plus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/tables.css">
+  <link rel="stylesheet" href="../css/forms.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo"><i class="fas fa-heart-pulse"></i><span>MediCare+</span></a>
+        <button class="sidebar-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="sidebar-user">
+        <div class="sidebar-user-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="John Doe"></div>
+        <div class="sidebar-user-info"><h5>John Doe</h5><span>Patient</span></div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-section">
+          <p class="sidebar-nav-title">Main Menu</p>
+          <a href="dashboard.html" class="sidebar-link active"><i class="fas fa-th-large"></i> Dashboard</a>
+          <a href="profile.html" class="sidebar-link"><i class="fas fa-user"></i> My Profile</a>
+          <a href="book-appointment.html" class="sidebar-link"><i class="fas fa-calendar-plus"></i> Book Appointment</a>
+          <a href="appointments.html" class="sidebar-link"><i class="fas fa-calendar-check"></i> Appointment History</a>
+          <a href="prescriptions.html" class="sidebar-link"><i class="fas fa-file-prescription"></i> Prescriptions</a>
+        </div>
+        <div class="sidebar-nav-section">
+          <p class="sidebar-nav-title">Account</p>
+          <a href="settings.html" class="sidebar-link"><i class="fas fa-cog"></i> Settings</a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" class="sidebar-link logout logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div class="dashboard-header-left">
+          <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+          <div class="dashboard-search"><i class="fas fa-search"></i><input type="text" placeholder="Search appointments, doctors..."></div>
+        </div>
+        <div class="dashboard-header-right">
+          <button class="theme-toggle header-action"><i class="fas fa-moon"></i></button>
+          <button class="header-action notification-btn"><i class="fas fa-bell"></i><span class="notification-dot"></span></button>
+          <div class="header-user">
+            <div class="header-user-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="John Doe"></div>
+            <div class="header-user-info"><h5>John Doe</h5><span>Patient</span></div>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-content page-transition">
+        <div class="page-title-bar">
+          <h1>Patient Dashboard</h1>
+          <p>Welcome back, John! Here's an overview of your health journey at MediCare Plus.</p>
+        </div>
+
+        <div class="quick-actions">
+          <a href="book-appointment.html" class="quick-action-btn"><i class="fas fa-calendar-plus"></i><span>Book Appointment</span></a>
+          <a href="prescriptions.html" class="quick-action-btn"><i class="fas fa-file-prescription"></i><span>View Prescriptions</span></a>
+          <a href="profile.html" class="quick-action-btn"><i class="fas fa-user-edit"></i><span>Update Profile</span></a>
+        </div>
+
+        <div class="stats-cards">
+          <div class="stat-card glass-card">
+            <div class="stat-card-icon blue"><i class="fas fa-calendar-day"></i></div>
+            <div class="stat-card-content">
+              <h3>1</h3>
+              <p>Upcoming Appointment</p>
+              <div class="stat-card-trend up"><i class="fas fa-clock"></i> Aug 2, 2026</div>
+            </div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-card-icon green"><i class="fas fa-calendar-check"></i></div>
+            <div class="stat-card-content">
+              <h3>12</h3>
+              <p>Total Appointments</p>
+              <div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 2 this month</div>
+            </div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-card-icon orange"><i class="fas fa-user-md"></i></div>
+            <div class="stat-card-content">
+              <h3>5</h3>
+              <p>Doctors Consulted</p>
+              <div class="stat-card-trend up"><i class="fas fa-stethoscope"></i> 3 specialties</div>
+            </div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-card-icon red"><i class="fas fa-heart"></i></div>
+            <div class="stat-card-content">
+              <h3>3</h3>
+              <p>Health Tips</p>
+              <div class="stat-card-trend up"><i class="fas fa-lightbulb"></i> New this week</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h3>Upcoming Appointment</h3>
+              <a href="appointments.html" class="btn btn-outline btn-sm">View All</a>
+            </div>
+            <div class="dashboard-card-body">
+              <div class="appointment-cards">
+                <div class="appointment-card">
+                  <div class="appointment-time">
+                    <h5>10:00</h5>
+                    <span>AM</span>
+                  </div>
+                  <div class="appointment-details">
+                    <h5>Dr. Sarah Wilson</h5>
+                    <p><i class="fas fa-building"></i> Cardiology &nbsp;|&nbsp; <i class="fas fa-calendar"></i> August 2, 2026</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Room 204, Building A</p>
+                  </div>
+                  <span class="status-badge scheduled">Scheduled</span>
+                </div>
+                <div class="appointment-card">
+                  <div class="appointment-time">
+                    <h5>02:30</h5>
+                    <span>PM</span>
+                  </div>
+                  <div class="appointment-details">
+                    <h5>Dr. Emily Parker</h5>
+                    <p><i class="fas fa-building"></i> Neurology &nbsp;|&nbsp; <i class="fas fa-calendar"></i> August 15, 2026</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Room 112, Building B</p>
+                  </div>
+                  <span class="status-badge scheduled">Scheduled</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-card-header"><h3>Health Tips</h3></div>
+            <div class="dashboard-card-body">
+              <div class="health-tip">
+                <h4><i class="fas fa-droplet"></i> Stay Hydrated</h4>
+                <p>Drink at least 8 glasses of water daily to maintain optimal body function and support recovery.</p>
+              </div>
+              <div class="health-tip" style="margin-top: 1rem;">
+                <h4><i class="fas fa-person-walking"></i> Daily Exercise</h4>
+                <p>Aim for 30 minutes of moderate activity each day. Even a brisk walk can improve cardiovascular health.</p>
+              </div>
+              <div class="health-tip" style="margin-top: 1rem;">
+                <h4><i class="fas fa-moon"></i> Quality Sleep</h4>
+                <p>Get 7–9 hours of sleep nightly. Consistent rest strengthens immunity and aids healing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card" style="margin-top: 1.5rem;">
+          <div class="dashboard-card-header">
+            <h3>Recent Activity</h3>
+            <a href="appointments.html" class="btn btn-outline btn-sm">View All</a>
+          </div>
+          <div class="dashboard-card-body">
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-icon green"><i class="fas fa-calendar-check"></i></div>
+                <div class="activity-content">
+                  <h5>Appointment confirmed</h5>
+                  <p>Dr. Sarah Wilson — Cardiology, Aug 2 at 10:00 AM</p>
+                </div>
+                <span class="activity-time">2 hours ago</span>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon blue"><i class="fas fa-file-prescription"></i></div>
+                <div class="activity-content">
+                  <h5>New prescription added</h5>
+                  <p>Dr. Thomas Brown — General Medicine, Lisinopril 10mg</p>
+                </div>
+                <span class="activity-time">1 day ago</span>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon orange"><i class="fas fa-check-circle"></i></div>
+                <div class="activity-content">
+                  <h5>Appointment completed</h5>
+                  <p>Dr. David Kumar — Orthopedics, Follow-up visit</p>
+                </div>
+                <span class="activity-time">3 days ago</span>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon blue"><i class="fas fa-user-edit"></i></div>
+                <div class="activity-content">
+                  <h5>Profile updated</h5>
+                  <p>Contact information and address changed</p>
+                </div>
+                <span class="activity-time">1 week ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/validation.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/appointment.js"></script>
+  <script src="../js/patient.js"></script>
+</body>
+</html>

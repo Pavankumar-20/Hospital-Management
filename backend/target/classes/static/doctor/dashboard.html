@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Dashboard | MediCare Plus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/tables.css">
+  <link rel="stylesheet" href="../css/forms.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo"><i class="fas fa-heart-pulse"></i><span>MediCare+</span></a>
+        <button class="sidebar-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="sidebar-user">
+        <div class="sidebar-user-avatar"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop" alt="Dr. Sarah Wilson"></div>
+        <div class="sidebar-user-info"><h5>Dr. Sarah Wilson</h5><span>Cardiologist</span></div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-section">
+          <p class="sidebar-nav-title">Main Menu</p>
+          <a href="dashboard.html" class="sidebar-link active"><i class="fas fa-th-large"></i> Dashboard</a>
+          <a href="appointments.html" class="sidebar-link"><i class="fas fa-calendar-check"></i> Appointments</a>
+          <a href="patients.html" class="sidebar-link"><i class="fas fa-users"></i> Patients</a>
+          <a href="prescriptions.html" class="sidebar-link"><i class="fas fa-prescription-bottle-medical"></i> Prescriptions</a>
+        </div>
+        <div class="sidebar-nav-section">
+          <p class="sidebar-nav-title">Account</p>
+          <a href="profile.html" class="sidebar-link"><i class="fas fa-user"></i> Profile</a>
+          <a href="settings.html" class="sidebar-link"><i class="fas fa-cog"></i> Settings</a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" class="sidebar-link logout logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div class="dashboard-header-left">
+          <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+          <div class="dashboard-search"><i class="fas fa-search"></i><input type="text" placeholder="Search patients, appointments..."></div>
+        </div>
+        <div class="dashboard-header-right">
+          <button class="theme-toggle header-action"><i class="fas fa-moon"></i></button>
+          <button class="header-action notification-btn"><i class="fas fa-bell"></i><span class="notification-dot"></span></button>
+          <div class="header-user">
+            <div class="header-user-avatar"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop" alt="Dr. Sarah Wilson"></div>
+            <div class="header-user-info"><h5>Dr. Sarah Wilson</h5><span>Cardiologist</span></div>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-content page-transition">
+        <div class="page-title-bar">
+          <h1>Doctor Dashboard</h1>
+          <p>Good morning, Dr. Wilson! You have 8 appointments scheduled for today.</p>
+        </div>
+
+        <div class="stats-cards">
+          <div class="stat-card glass-card">
+            <div class="stat-card-icon blue"><i class="fas fa-user-injured"></i></div>
+            <div class="stat-card-content">
+              <h3>8</h3>
+              <p>Today's Patients</p>
+              <div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 2 more than yesterday</div>
+            </div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-card-icon green"><i class="fas fa-check-circle"></i></div>
+            <div class="stat-card-content">
+              <h3>3</h3>
+              <p>Completed Appointments</p>
+              <div class="stat-card-trend up"><i class="fas fa-check"></i> On track</div>
+            </div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-card-icon orange"><i class="fas fa-clock"></i></div>
+            <div class="stat-card-content">
+              <h3>5</h3>
+              <p>Pending Appointments</p>
+              <div class="stat-card-trend"><i class="fas fa-hourglass-half"></i> Next at 10:30 AM</div>
+            </div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-card-icon red"><i class="fas fa-calendar-plus"></i></div>
+            <div class="stat-card-content">
+              <h3>4</h3>
+              <p>Available Time Slots</p>
+              <div class="stat-card-trend up"><i class="fas fa-calendar"></i> This afternoon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-actions">
+          <a href="appointments.html" class="quick-action-btn"><i class="fas fa-calendar-check"></i> View Appointments</a>
+          <a href="prescriptions.html" class="quick-action-btn"><i class="fas fa-prescription"></i> Write Prescription</a>
+          <a href="patients.html" class="quick-action-btn"><i class="fas fa-users"></i> My Patients</a>
+          <a href="settings.html" class="quick-action-btn"><i class="fas fa-clock"></i> Manage Schedule</a>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h3>Today's Appointments</h3>
+              <a href="appointments.html" class="btn btn-outline btn-sm">View All</a>
+            </div>
+            <div class="dashboard-card-body">
+              <div class="appointment-cards">
+                <div class="appointment-card">
+                  <div class="appointment-time"><h5>09:00</h5><span>AM</span></div>
+                  <div class="table-user-avatar" style="width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+                  <div class="appointment-details">
+                    <h5>Robert Anderson</h5>
+                    <p>Follow-up · Hypertension review · <span class="status-badge completed">Completed</span></p>
+                  </div>
+                  <a href="prescriptions.html" class="btn btn-outline btn-sm"><i class="fas fa-prescription"></i></a>
+                </div>
+                <div class="appointment-card">
+                  <div class="appointment-time"><h5>09:45</h5><span>AM</span></div>
+                  <div class="table-user-avatar" style="width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+                  <div class="appointment-details">
+                    <h5>Maria Garcia</h5>
+                    <p>New Patient · Chest pain evaluation · <span class="status-badge completed">Completed</span></p>
+                  </div>
+                  <a href="prescriptions.html" class="btn btn-outline btn-sm"><i class="fas fa-prescription"></i></a>
+                </div>
+                <div class="appointment-card">
+                  <div class="appointment-time"><h5>10:30</h5><span>AM</span></div>
+                  <div class="table-user-avatar" style="width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+                  <div class="appointment-details">
+                    <h5>James Thompson</h5>
+                    <p>ECG Review · Arrhythmia monitoring · <span class="status-badge pending">In Progress</span></p>
+                  </div>
+                  <button class="btn btn-primary btn-sm complete-appointment"><i class="fas fa-check"></i> Complete</button>
+                </div>
+                <div class="appointment-card">
+                  <div class="appointment-time"><h5>11:15</h5><span>AM</span></div>
+                  <div class="table-user-avatar" style="width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+                  <div class="appointment-details">
+                    <h5>Linda Martinez</h5>
+                    <p>Consultation · Post-surgery cardiac check · <span class="status-badge scheduled">Scheduled</span></p>
+                  </div>
+                  <button class="btn btn-outline btn-sm"><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="appointment-card">
+                  <div class="appointment-time"><h5>02:00</h5><span>PM</span></div>
+                  <div class="table-user-avatar" style="width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+                  <div class="appointment-details">
+                    <h5>David Chen</h5>
+                    <p>Follow-up · Cholesterol management · <span class="status-badge scheduled">Scheduled</span></p>
+                  </div>
+                  <button class="btn btn-outline btn-sm"><i class="fas fa-eye"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-card-header"><h3>Calendar</h3></div>
+            <div class="dashboard-card-body">
+              <div class="calendar-widget">
+                <div class="calendar-header">
+                  <button class="calendar-nav prev"><i class="fas fa-chevron-left"></i></button>
+                  <h4></h4>
+                  <button class="calendar-nav next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar-grid">
+                  <div class="calendar-day-name">Su</div><div class="calendar-day-name">Mo</div><div class="calendar-day-name">Tu</div><div class="calendar-day-name">We</div><div class="calendar-day-name">Th</div><div class="calendar-day-name">Fr</div><div class="calendar-day-name">Sa</div>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard-card-body" style="border-top:1px solid var(--gray-200);padding-top:1rem;">
+              <div class="health-tip">
+                <h4><i class="fas fa-lightbulb"></i> Clinical Reminder</h4>
+                <p>Review lab results for James Thompson before the 10:30 AM appointment. ECG from last week shows mild arrhythmia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card" style="margin-top:1.5rem;">
+          <div class="dashboard-card-header"><h3>Recent Activity</h3></div>
+          <div class="dashboard-card-body">
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-icon green"><i class="fas fa-check-circle"></i></div>
+                <div class="activity-content"><h5>Appointment completed</h5><p>Maria Garcia — Chest pain evaluation</p></div>
+                <span class="activity-time">25 min ago</span>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon blue"><i class="fas fa-prescription"></i></div>
+                <div class="activity-content"><h5>Prescription issued</h5><p>Robert Anderson — Lisinopril 10mg</p></div>
+                <span class="activity-time">1 hour ago</span>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon orange"><i class="fas fa-file-medical"></i></div>
+                <div class="activity-content"><h5>Lab results received</h5><p>James Thompson — Lipid panel</p></div>
+                <span class="activity-time">2 hours ago</span>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon blue"><i class="fas fa-user-plus"></i></div>
+                <div class="activity-content"><h5>New patient assigned</h5><p>David Chen — Referred by Dr. Parker</p></div>
+                <span class="activity-time">Yesterday</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/validation.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/doctor.js"></script>
+</body>
+</html>
